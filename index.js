@@ -5,7 +5,7 @@ let h = canvas.height,
   w = canvas.width;
 
 let arr=[];
-let barWidth = 5;
+let barWidth = 10;
 let size=Math.floor(w /(barWidth+1));
 let state=0;
 
