@@ -68,9 +68,9 @@
       font-size: 30px;
     }
   }
-  @media (min-width: 460px) and (max-width: 629px){
+  @media (min-width: 500px) and (max-width: 629px){
     .btn{
-      font-size: 15px;
+      font-size: 20px;
       margin: 15px 5px;
 
     }
@@ -78,12 +78,21 @@
       font-size: 25px;
     }
   }
-  @media (max-width: 460px){
+  @media (min-width:410px) and (max-width: 500px){
     .btn{
-      font-size: 8px;
+      font-size: 16px;
       margin: 12px 3px;
     }
     h1{
-      font-size: 15px;
+      font-size: 22px;
     }
+  }
+  @media (max-width: 410px){
+    .btn{
+        font-size: 10px;
+        margin: 12px 3px;
+      }
+      h1{
+        font-size: 16px;
+      }
   }
