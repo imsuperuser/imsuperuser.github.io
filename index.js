@@ -9,6 +9,7 @@ let barWidth = 6;
 let size=Math.floor(w /(barWidth+1));
 let state=0;
 
+
 //generating random numbers
 function generateArray(size) {
   let arr = new Array(size);
