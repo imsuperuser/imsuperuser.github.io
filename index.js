@@ -19,19 +19,13 @@ function generateArray(size) {
 }
 
 
-// console.log("array length: ", arr.length);
-console.log("canvas width : ", w);
-console.log("bar width: ", barWidth);
-
 function clearScreen() {
-  console.log('clearing screen');
   ctx.fillStyle = "black";
   ctx.fillRect(0, 0, w, h);
 }
 
 function drawArray(arr,indexA,indexB,color) {
   clearScreen();
-  console.log("inside draw");
   let x = 0;
   for (let i = 0; i < arr.length; i++) {
     if(i!=indexA && i!=indexB)
@@ -71,7 +65,6 @@ async function bubbleSort() {
         drawArray(arr,j,j+1,"#0066cc");
         await sleep(0);
         swap(arr, j, j + 1);
-        // requestAnimationFrame(drawArray);
         swapped = true;
       }
     }
@@ -119,7 +112,6 @@ async function heapSort() {
   }
 
   for (i = arr.length - 1; i > 0; i--) {
-    // requestAnimationFrame(drawArray);
     drawArray(arr,0,i,"#0066cc");
     await sleep(10);
     swap(arr, 0, i);
@@ -157,7 +149,7 @@ async function partition (arr, low, high)
 
 async function quickSort(arr, low, high)
 {
-  console.log("start: ",low," end: ",high);
+  state=1;
     if (low < high)
     {
         let pi = await partition(arr, low, high);
@@ -165,6 +157,7 @@ async function quickSort(arr, low, high)
         await quickSort(arr, pi + 1, high);
     }
     drawArray(arr,-1,-1,"rgb(15, 185, 0)");
+    state=0;
 }
 
 
@@ -202,19 +195,13 @@ async function insertionSort()
 document.getElementById('newArray').addEventListener('click',function(){
   if(state==0){
     arr=generateArray(size);
-    console.log('creating');
     drawArray(arr,-1,-1,"#0066cc");    
-    console.log('done');
   }
 })
 
 async function quick(){
   if(state==1)
     return;
-  state=1;
   console.log("inside quick()");
   quickSort(arr,0,size-1);
-  state=0;
-  drawArray(arr,-1,-1,"#0066cc");   
-  console.log("after sorting array: ",arr);
 }
