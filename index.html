@@ -5,25 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sorting Algorithms Visualization</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
       <h1>Sorting Algorithms Visualizer</h1>
-      <canvas id="myCanvas" width="1200" height="400" style="">
+      <canvas id="myCanvas" width="1200" height="400">
         This is my canvas
       </canvas>
       <div class="buttons">
-        <button class='btn' id="Heap" onclick="heapSort()">Heap Sort</button>
-        <button class="btn" id='Quick' onclick='quick()'>Quick Sort</button>
+        <button class="btn" id="Heap" onclick="heapSort()">Heap Sort</button>
+        <button class="btn" id="Quick" onclick="quick()">Quick Sort</button>
         <button class="btn" onclick="insertionSort()">Insertion Sort</button>
-        <button class='btn' id="Bub" onclick="bubbleSort()">Bubble Sort</button>
-    </div>
-    <div class='generate'>
-      <button class='btn' id='newArray'>Generate New Array</button>
-    </div>
+        <button class="btn" id="Bub" onclick="bubbleSort()">Bubble Sort</button>
+      </div>
+      <div class="generate">
+        <button class="btn" id="newArray">Generate New Array</button>
+      </div>
     </div>
     <script src="index.js"></script>
   </body>
