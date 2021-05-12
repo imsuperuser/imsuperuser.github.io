@@ -44,6 +44,7 @@ h1 {
   background: none;
   color: black;
   border: none;
+  outline: none;
 }
 .btn:hover {
   transform: scale(1.01);
