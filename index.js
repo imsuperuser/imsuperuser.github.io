@@ -176,10 +176,10 @@ async function heapSort() {
 
 ///////////////////////////////////////////////////////
 //Quick Sort--------------------------------------------
-async function partition (arr, low, high)
+async function partition (low, high)
 {
-  if(!running)
-    return;
+  // if(!running)
+    // return;
     let pivot = arr[high]; 
     let i = (low - 1); // Index of smaller element and indicates the right position of pivot found so far
  
@@ -200,27 +200,28 @@ async function partition (arr, low, high)
     return (i + 1);
 }
 
-async function quickSort(arr, low, high)
+async function quickSort(low, high)
 {
-    if(!running)
-      return;
-    if (low < high)
+    // if(!running)
+      // return;
+    console.log(low," ",high)
+    if (low < high && running)
     {
-        let pi = await partition(arr, low, high);
-        await quickSort(arr, low, pi - 1);
-        await quickSort(arr, pi + 1, high);
+        let pi = await partition(low, high);
+        await quickSort(low, pi - 1);
+        await quickSort(pi + 1, high);
     }
+    
+  }
+  
+  async function quick(){
+    if(running)
+    return;
+    running=1;
+    console.log("inside quick()");
+    await quickSort(0,arr.length-1);
     drawArray(-1,-1,"rgb(15, 185, 0)");
     reset();
-
-}
-
-async function quick(){
-  if(running)
-    return;
-  running=1;
-  console.log("inside quick()");
-  quickSort(arr,0,size-1);
 }
 
 /////////////////////////////////////////////////////////
