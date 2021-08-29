@@ -18,15 +18,26 @@
       <canvas id="myCanvas" width="1200" height="400">
         This is my canvas
       </canvas>
-      <div class="buttons">
-        <button class="btn" id="Heap" onclick="heapSort()">Heap Sort</button>
-        <button class="btn" id="Quick" onclick="quick()">Quick Sort</button>
-        <button class="btn" onclick="insertionSort()">Insertion Sort</button>
-        <button class="btn" id="Bub" onclick="bubbleSort()">Bubble Sort</button>
-      </div>
-      <div class="generate">
-        <button class="btn" id="newArray">Generate New Array</button>
-      </div>
+      <div class="btn-container">
+          <button class="btn" id="newArray">Generate New Array</button>
+          
+          <select name="Algorithms" id="algo" class='btn'>
+            <option value="Heap">Heap Sort -- O(Nlog(N))</option>
+            <option value="Quick">Quick Sort -- O(Nlog(N))</option>
+            <option value="Insertion">Insertion Sort -- O(N^2)</option>
+            <option value="Bubble">Bubble Sort -- O(N^2)</option>
+          </select>
+
+          <button id='sort' class="btn">Sort</button>
+      
+        </div>
+        
+        <div class="btn">
+          <p>Array Size</p>
+          <input type="range" min="20" max="200" value="50" class="slider" id="myRange">
+        </div>
+      
+        <p id="timer">Timer: <span id="time"></span></p>
     </div>
     <script src="index.js"></script>
   </body>
