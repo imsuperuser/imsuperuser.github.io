@@ -24,8 +24,11 @@
           <select name="Algorithms" id="algo" class='btn'>
             <option value="Heap">Heap Sort -- O(Nlog(N))</option>
             <option value="Quick">Quick Sort -- O(Nlog(N))</option>
+            <option value="Merge">Merge Sort -- O(Nlog(N))</option>
             <option value="Insertion">Insertion Sort -- O(N^2)</option>
             <option value="Bubble">Bubble Sort -- O(N^2)</option>
+            <option value="Shell">Shell Sort -- O(N^2)</option>
+
           </select>
 
           <button id='sort' class="btn">Sort</button>
@@ -34,11 +37,11 @@
         
         <div class="btn">
           <p>Array Size</p>
-          <input type="range" min="20" max="200" value="50" class="slider" id="myRange">
+          <input type="range" min="50" max="300" value="100" class="slider" id="myRange">
         </div>
       
         <p id="timer">Timer: <span id="time"></span></p>
     </div>
-    <script src="index.js"></script>
+    <script type="module" src="index.js"></script>
   </body>
 </html>
